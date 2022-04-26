@@ -32,6 +32,14 @@ namespace Showdown
             set { _name = value; }
         }
 
+        private int _point;
+
+        public int Point
+        {
+            get { return _point; }
+            set { _point = value; }
+        }
+
         private bool _isUsePrivilege;
 
         public bool IsUsePrivilege

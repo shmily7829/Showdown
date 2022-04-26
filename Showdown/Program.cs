@@ -33,6 +33,21 @@ namespace Showdown
 
             //StartGame
             Console.WriteLine("StartGame");
+
+            //初始化卡牌(洗牌)
+
+            //抽牌(發牌直到發完)
+
+            //回合開始
+
+            //是否使用交換手牌(每個玩家每局遊戲只能用一次，三回合後手牌交換回來)
+
+            //出牌(Show)
+
+            //比大小勝者分數加一
+
+
+
             Console.Read();
         }
     }

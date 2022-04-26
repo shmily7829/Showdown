@@ -41,29 +41,41 @@ namespace Showdown
             set { _suit = value; }
         }
 
-        private int _point;
-
-        /// <summary>
-        /// 分數
-        /// </summary>
-        public int Point
+        public Card CompareCard(Card cardA, Card cardB)
         {
-            get { return _point; }
-            set { _point = value; }
-        }
+            Card winCard = new Card();
+            if (cardA.Rank > cardB.Rank)
+            {
+                if (cardA.Suit > cardB.Suit)
+                {
+                    winCard = cardA;
+                }
+            }
 
-        public void CompareCard(Card cardA, Card cardB)
-        {
-            if (cardA.Suit.CompareTo(cardB.Suit) > 0)
+            if (cardA.Rank > cardB.Rank)
             {
-                if (cardA.Rank.CompareTo(cardB.Rank) > 0)
-                    cardA.Point++;
+                if (cardB.Suit > cardA.Suit)
+                {
+                    winCard = cardB;
+                }
             }
-            else
+
+            if (cardB.Rank > cardA.Rank)
             {
-                if (cardB.Rank.CompareTo(cardA.Rank) > 0)
-                    cardB.Point++;
+                if (cardB.Suit > cardA.Suit)
+                {
+                    return cardB;
+                }
             }
+
+            if (cardB.Rank > cardA.Rank)
+            {
+                if (cardA.Suit > cardB.Suit)
+                {
+                    return cardB;
+                }
+            }
+            return winCard;
         }
     }
 }

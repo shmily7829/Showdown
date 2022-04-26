@@ -47,6 +47,7 @@
     <Compile Include="Card.cs" />
     <Compile Include="CardRank.cs" />
     <Compile Include="CardSuit.cs" />
+    <Compile Include="GameTurn.cs" />
     <Compile Include="HumanPlayer.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
