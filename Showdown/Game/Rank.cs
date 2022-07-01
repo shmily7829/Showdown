@@ -9,9 +9,8 @@ namespace Showdown
     /// <summary>
     /// 等級
     /// </summary>
-    public enum CardRank
+    public enum Rank
     {
-        Unknow = 0,
         Two,
         Three,
         Four,

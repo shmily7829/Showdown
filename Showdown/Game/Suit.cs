@@ -10,13 +10,12 @@ namespace Showdown
     /// <summary>
     /// 花色
     /// </summary>
-    public enum CardSuit
+    public enum Suit
     {
-        Unknow = 0,
-        Club,
-        Diamond,
-        Heart,
-        Spade
+        Club = '♣',
+        Diamond = '♦',
+        Heart = '♥',
+        Spade = '♠'
     }
 
 }
