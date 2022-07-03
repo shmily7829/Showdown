@@ -14,9 +14,6 @@ namespace Showdown
             //初始化卡牌
             Deck deck = new Deck();
 
-            //洗牌
-            deck.Shuffle();
-
             //開啟新牌局
             List<Player> players = new List<Player>()
             { new HumanPlayer(),

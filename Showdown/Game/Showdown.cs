@@ -28,9 +28,12 @@ namespace Showdown
         {
             //玩家命名
             this.NamePlayers();
+
             //洗牌
             this._deck.Shuffle();
-            //玩家抽牌(發牌直到發完)
+
+            //發牌
+            this.DrawHands();
 
             //回合開始
 
@@ -49,7 +52,29 @@ namespace Showdown
         {
             for (int i = 0; i < _players.Count; i++)
             {
-               _players[i].NameHimSelf(i + 1);
+                _players[i].NameHimSelf(i + 1);
+                Console.WriteLine(_players[i].Name);
+            }
+
+        }
+
+        private void DrawHands()
+        {
+            int totalCards = this._deck.CardStack.Count;
+            int cardIndex = 0;
+
+            for (int i = 0; i < _players.Count; i++)
+            {
+                for (int k = cardIndex; k < totalCards; k++)
+                {
+                    if (_players[i].Hands.Cards.Count == 13)
+                    {
+                        break;
+                    }
+                    _players[i].AddHands(this._deck.CardStack[k]);
+                    cardIndex++;
+                    Console.WriteLine($"{_players[i].Name}取得第{_players[i].Hands.Cards.Count}張手牌:{this._deck.CardStack[k].Suit} {this._deck.CardStack[k].Rank}");
+                }
             }
         }
 

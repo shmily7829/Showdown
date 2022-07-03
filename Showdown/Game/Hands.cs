@@ -8,7 +8,14 @@ namespace Showdown.Game
 {
     internal class Hands
     {
-        public int Count { get; set; } = 13;
+        public List<Card> Cards = new List<Card>();
 
+        public void AddCard(Card card)
+        {
+            if (Cards.Count <= 13)
+            {
+                Cards.Add(card);
+            }
+        }
     }
 }

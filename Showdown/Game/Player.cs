@@ -17,8 +17,7 @@ namespace Showdown
 
         public Showdown Showdown { get; set; }
 
-        public Hands Hands { get; set; }
-
+        public Hands Hands = new Hands();
 
         /// <summary>
         /// 取名字
@@ -50,5 +49,12 @@ namespace Showdown
         /// </summary>
         public abstract void GetPoint();
 
+        /// <summary>
+        /// 取得手牌
+        /// </summary>
+        public void AddHands(Card card)
+        {
+            this.Hands.AddCard(card);
+        }
     }
 }

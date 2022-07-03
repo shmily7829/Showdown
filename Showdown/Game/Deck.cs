@@ -39,26 +39,27 @@ namespace Showdown.Game
         public void Shuffle()
         {
             int randIndex;
-            Random r = new Random(); //亂數產生函式
+            Random r = new Random();
             List<Card> temp = new List<Card>();
+
+            while (CardStack.Count > 0)
+            {
+                randIndex = r.Next(0, CardStack.Count);
+                temp.Add(CardStack[randIndex]);
+                CardStack.RemoveAt(randIndex);
+            }
+
+            CardStack = temp;
 
             for (int i = 0; i < CardStack.Count; i++)
             {
-                //產生一個0~51之間的亂數
-                randIndex = r.Next(0, CardStack.Count);
-                temp.Add((Card)CardStack[randIndex]);
+                Console.WriteLine($"第{i + 1}張牌是：{CardStack[i].Suit} {CardStack[i].Rank}");
             }
-            CardStack = temp;
-
-            //for (int i = 0; i < CardStack.Count; i++)
-            //{               
-            //    Console.WriteLine($"第{i + 1}張牌是：{CardStack[i].Suit} {CardStack[i].Rank}");
-            //}
         }
 
-        public Card DrawCard(Player player)
+        public Card DrawCard()
         {
-            return new Card();
+            return Card;
         }
     }
 }

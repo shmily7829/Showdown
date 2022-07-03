@@ -12,10 +12,10 @@ namespace Showdown
     /// </summary>
     public enum Suit
     {
-        Club = '♣',
-        Diamond = '♦',
-        Heart = '♥',
-        Spade = '♠'
+        Club,
+        Diamond,
+        Heart,
+        Spade
     }
 
 }
