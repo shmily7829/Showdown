@@ -17,5 +17,11 @@ namespace Showdown.Game
                 Cards.Add(card);
             }
         }
+
+
+        public void RemoveCard(int index)
+        {
+            Cards.RemoveAt(index);
+        }
     }
 }

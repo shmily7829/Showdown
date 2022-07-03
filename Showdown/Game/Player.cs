@@ -13,11 +13,14 @@ namespace Showdown
 
         public abstract int Point { get; set; }
 
+        public abstract bool UsedExchangeFlag { get; set; }
+
         public int Count { get; set; } = 0;
 
         public Showdown Showdown { get; set; }
 
         public Hands Hands = new Hands();
+
 
         /// <summary>
         /// 取名字
